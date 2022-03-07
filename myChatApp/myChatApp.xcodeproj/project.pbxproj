@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2859D39E27D6802300F1C3CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2859D39D27D6802300F1C3CE /* GoogleService-Info.plist */; };
 		2859D3A227D6808B00F1C3CE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2859D3A127D6808B00F1C3CE /* LoginViewController.swift */; };
+		2859D3AA27D685C400F1C3CE /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2859D3A927D685C400F1C3CE /* RegistrationViewController.swift */; };
 		287FB4F027D648D200FA7D6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287FB4EF27D648D200FA7D6C /* AppDelegate.swift */; };
 		287FB4F227D648D200FA7D6C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287FB4F127D648D200FA7D6C /* SceneDelegate.swift */; };
 		287FB4F427D648D200FA7D6C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287FB4F327D648D200FA7D6C /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		2859D39D27D6802300F1C3CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2859D3A127D6808B00F1C3CE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2859D3A927D685C400F1C3CE /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		287FB4EC27D648D200FA7D6C /* myChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		287FB4EF27D648D200FA7D6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		287FB4F127D648D200FA7D6C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 			children = (
 				287FB4F327D648D200FA7D6C /* ViewController.swift */,
 				2859D3A127D6808B00F1C3CE /* LoginViewController.swift */,
+				2859D3A927D685C400F1C3CE /* RegistrationViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2859D3AA27D685C400F1C3CE /* RegistrationViewController.swift in Sources */,
 				287FB4F427D648D200FA7D6C /* ViewController.swift in Sources */,
 				287FB4FA27D648D200FA7D6C /* myChatApp.xcdatamodeld in Sources */,
 				287FB4F027D648D200FA7D6C /* AppDelegate.swift in Sources */,

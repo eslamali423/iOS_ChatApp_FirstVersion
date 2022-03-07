@@ -23,6 +23,8 @@ class RegistrationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        title = "Create new user"
+        
         firstnameLabel.text = ""
         lastnameLabel.text = ""
         emailLabel.text = ""
@@ -56,9 +58,6 @@ extension RegistrationViewController : UITextFieldDelegate {
         passwordLabel.text = passwordField.hasText ? "Password" : ""
         confirmPasswordLabel.text = confirmPasswordFiled.hasText ? "Confirm Password" : ""
 
-
-
-        
     }
     
 }

@@ -44,13 +44,18 @@ class LoginViewController: UIViewController {
            let password =  passwordField.text, !password.isEmpty {
             // go to login function
             UserManager.shared.login(email: email, password: password) { (error, isEmailVerified) in
-                if error == nil && isEmailVerified {
-                    print("Success to login")
-                    self.dismiss(animated: true, completion: nil)
+               
+                if error == nil {
+                    if isEmailVerified {
+                        print("go to app")
+                    }else {
+                        ProgressHUD.showError("Please check your Emial and varify your account to confirm Registration")
+                    }
+                }else {
+                    ProgressHUD.showError(error?.localizedDescription)
+
                 }
-                else {
-                    print("failed to login")
-                }
+                
             }
 
 

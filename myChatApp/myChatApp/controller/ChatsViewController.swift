@@ -15,7 +15,11 @@ class ChatsViewController: UIViewController {
 
         title = "Chats"
         handelAuthentcation()
-
+        do {
+            try Auth.auth().signOut()
+        }catch {
+            
+        }
         // Do any additional setup after loading the view.
     }
     
@@ -25,9 +29,9 @@ class ChatsViewController: UIViewController {
     }
     
     private func handelAuthentcation(){
-        
-        let loggedIn = UserDefaults.standard.bool(forKey: "currentUser")
-        if loggedIn == false {
+    
+  //      let loggedIn = UserDefaults.standard.bool(forKey: "currentUser")
+        if Auth.auth().currentUser == nil {
          //   self.tabBarController?.tabBar.isHidden = true
 
             let loginVC = storyboard?.instantiateViewController(identifier: "LoginViewController") as! LoginViewController

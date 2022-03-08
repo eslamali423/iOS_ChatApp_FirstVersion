@@ -30,11 +30,14 @@ class LoginViewController: UIViewController {
         emailField.delegate = self
         passwordField.delegate = self
         
+        hideKeyboardWhenEndEditing()
+        
         
 
     }
+ 
+    //MARK:- Did tap Login Button
 
-    
     @IBAction func loginButton(_ sender: Any) {
         // validation
         if let email = emailField.text, !email.isEmpty,
@@ -44,20 +47,30 @@ class LoginViewController: UIViewController {
         }else {
             ProgressHUD.showError("Please fill the Email and password correctly")
         }
-    
-        
-        
-        
     }
- 
+   
+    
+
+ //MARK:- Did tap in create new account button
     @IBAction func registrationButton(_ sender: Any) {
         let registrationVC = storyboard?.instantiateViewController(identifier: "RegistrationViewController") as! RegistrationViewController
-        registrationVC.modalPresentationStyle = .fullScreen
-        navigationController?.pushViewController(registrationVC, animated: true)
-      //  present(registrationVC, animated: true, completion: nil)
+       // registrationVC.modalPresentationStyle = .fullScreen
+      //  navigationController?.pushViewController(registrationVC, animated: true)
+        present(registrationVC, animated: true, completion: nil)
         
     }
-}
+    
+    //MARK:- to hide the keyboard when end Editing
+  private  func hideKeyboardWhenEndEditing (){
+    let gesture =  UITapGestureRecognizer(target: self, action: #selector(hidekeyboard))
+    view.addGestureRecognizer(gesture)
+   }
+    
+    @objc func hidekeyboard (){
+        view.endEditing(false)
+    }
+}//  loginViewController
+
 
 extension LoginViewController : UITextFieldDelegate {
     

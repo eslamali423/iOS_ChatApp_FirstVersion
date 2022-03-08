@@ -26,11 +26,12 @@ class ChatsViewController: UIViewController {
     private func handelAuthentcation(){
         let loggedIn = UserDefaults.standard.bool(forKey: "logged_in")
         if loggedIn == false {
-            self.tabBarController?.tabBar.isHidden = true
+         //   self.tabBarController?.tabBar.isHidden = true
 
             let loginVC = storyboard?.instantiateViewController(identifier: "LoginViewController") as! LoginViewController
             loginVC.modalPresentationStyle = .fullScreen
-            navigationController?.pushViewController(loginVC, animated: false)
+            present(loginVC, animated: false, completion: nil)
+       //     navigationController?.pushViewController(loginVC, animated: false)
         }
     }
     

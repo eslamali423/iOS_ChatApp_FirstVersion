@@ -43,7 +43,17 @@ class LoginViewController: UIViewController {
         if let email = emailField.text, !email.isEmpty,
            let password =  passwordField.text, !password.isEmpty {
             // go to login function
-            print("ready to login ")
+            UserManager.shared.login(email: email, password: password) { (error, isEmailVerified) in
+                if error == nil && isEmailVerified {
+                    print("Success to login")
+                    self.dismiss(animated: true, completion: nil)
+                }
+                else {
+                    print("failed to login")
+                }
+            }
+
+
         }else {
             ProgressHUD.showError("Please fill the Email and password correctly")
         }

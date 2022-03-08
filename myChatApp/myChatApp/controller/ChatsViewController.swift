@@ -24,7 +24,7 @@ class ChatsViewController: UIViewController {
     }
     
     private func handelAuthentcation(){
-        let loggedIn = UserDefaults.standard.bool(forKey: "logged_in")
+        let loggedIn = UserDefaults.standard.bool(forKey: "currentUser")
         if loggedIn == false {
          //   self.tabBarController?.tabBar.isHidden = true
 

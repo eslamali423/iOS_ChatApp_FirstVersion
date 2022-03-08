@@ -50,6 +50,16 @@ hideKeyboardWhenEndEditing()
            let cpassword = confirmPasswordFiled.text, !cpassword.isEmpty,
            password == cpassword{
             // success to get full data
+            UserManager.shared.registration(email: email, password: password) { (error) in
+                guard error != nil else {
+                    print ("something went wrong >>>>.....")
+                    return
+                }
+                    ProgressHUD.showError("Please check your email to verify")
+                self.dismiss(animated: true, completion: nil)
+
+                
+            }
             print("ready to sign up")
         } else  {
             ProgressHUD.showError("Please fill all requied data")

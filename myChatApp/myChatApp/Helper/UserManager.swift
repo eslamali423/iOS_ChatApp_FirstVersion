@@ -106,14 +106,16 @@ class UserManager {
     
     //MARK:- Did Tap Logout Button
 
-    public func signOut (completion : (Bool) -> Void){
+    public func signOut (completion : (_ error : Error?) -> Void){
             do{
                 try Auth.auth().signOut()
-                completion(true)
+                UserDefaults.standard.removeObject(forKey: "currentUser")
+                UserDefaults.standard.synchronize()
+                completion(nil)
             }
             catch {
             print("Error in sign out")
-                completion(false)
+                completion(error)
             }
  
     }

@@ -28,7 +28,7 @@ class ChatsViewController: UIViewController {
     
     @IBAction func signoutButton(_ sender: Any) {
         UserManager.shared.signOut { (isSuccess) in
-            if isSuccess {
+            if isSuccess == nil{
                 print("done")
                 self.dismiss(animated: true, completion: nil)
                 goToLoginViewController()

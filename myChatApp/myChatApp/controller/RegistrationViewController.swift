@@ -9,7 +9,9 @@ import UIKit
 import ProgressHUD
 
 class RegistrationViewController: UIViewController {
-
+    
+    //MARK:- Outlets
+    
     @IBOutlet weak var lastNameField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var lastnameLabel: UILabel!
@@ -21,10 +23,11 @@ class RegistrationViewController: UIViewController {
     @IBOutlet weak var profilePictureImageView: UIImageView!
     @IBOutlet weak var confirmPasswordLabel: UILabel!
     @IBOutlet weak var passwordLabel: UILabel!
-   
+    
+    //MARK:- ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         title = "Create new user"
         
         firstnameLabel.text = ""
@@ -39,9 +42,9 @@ class RegistrationViewController: UIViewController {
         passwordField.delegate = self
         confirmPasswordFiled.delegate = self
         
-hideKeyboardWhenEndEditing()
+        hideKeyboardWhenEndEditing()
     }
-    
+    //MARK:- Did Tap Sign Up Button
     @IBAction func signUpButton(_ sender: Any) {
         if let fname = firstNameField.text, !fname.isEmpty,
            let lname = lastNameField.text, !lname.isEmpty,
@@ -55,11 +58,11 @@ hideKeyboardWhenEndEditing()
                 guard error == nil else    {
                     ProgressHUD.showError(error?.localizedDescription)
                     print ("something went wrong >>>>.....")
-                        return
+                    return
                 }
                 ProgressHUD.showSuccess(" varification Email sent, plese verify your Email and confirm the registration")
                 self.dismiss(animated: true, completion: nil)
-
+                
             }
         } else  {
             ProgressHUD.showError("Please fill all requied data")
@@ -70,16 +73,18 @@ hideKeyboardWhenEndEditing()
     
     
     //MARK:- to hide the keyboard when end Editing
-  private  func hideKeyboardWhenEndEditing (){
-    let gesture =  UITapGestureRecognizer(target: self, action: #selector(hidekeyboard))
-    view.addGestureRecognizer(gesture)
-   }
+    private  func hideKeyboardWhenEndEditing (){
+        let gesture =  UITapGestureRecognizer(target: self, action: #selector(hidekeyboard))
+        view.addGestureRecognizer(gesture)
+    }
     
     @objc func hidekeyboard (){
         view.endEditing(false)
     }
     
-}
+}//RegistrationViewController
+
+//MARK:- TextField Delegation
 
 extension RegistrationViewController : UITextFieldDelegate {
     
@@ -90,7 +95,7 @@ extension RegistrationViewController : UITextFieldDelegate {
         emailLabel.text = emailField.hasText ? "Email" : ""
         passwordLabel.text = passwordField.hasText ? "Password" : ""
         confirmPasswordLabel.text = confirmPasswordFiled.hasText ? "Confirm Password" : ""
-
+        
     }
     
 }

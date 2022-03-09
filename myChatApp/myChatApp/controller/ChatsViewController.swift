@@ -12,14 +12,12 @@ class ChatsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        // to set navigartion controller item without set title for the tabBar item
+                navigationController?.navigationBar.topItem?.title = "Chats"
 
         title = "Chats"
         handelAuthentcation()
-        do {
-            try Auth.auth().signOut()
-        }catch {
-            
-        }
+      
         // Do any additional setup after loading the view.
     }
     
@@ -28,17 +26,33 @@ class ChatsViewController: UIViewController {
         
     }
     
+    @IBAction func signoutButton(_ sender: Any) {
+        UserManager.shared.signOut { (isSuccess) in
+            if isSuccess {
+                print("done")
+                self.dismiss(animated: true, completion: nil)
+                goToLoginViewController()
+            } else  {
+                print("error sign out")
+            }
+        }
+    }
+    
+    
     private func handelAuthentcation(){
     
   //      let loggedIn = UserDefaults.standard.bool(forKey: "currentUser")
         if Auth.auth().currentUser == nil {
          //   self.tabBarController?.tabBar.isHidden = true
 
-            let loginVC = storyboard?.instantiateViewController(identifier: "LoginViewController") as! LoginViewController
-            loginVC.modalPresentationStyle = .fullScreen
-            present(loginVC, animated: false, completion: nil)
+           goToLoginViewController()
        //     navigationController?.pushViewController(loginVC, animated: false)
         }
+    }
+    func goToLoginViewController()  {
+        let loginVC = storyboard?.instantiateViewController(identifier: "LoginViewController") as! LoginViewController
+        loginVC.modalPresentationStyle = .fullScreen
+        present(loginVC, animated: false, completion: nil)
     }
     
 

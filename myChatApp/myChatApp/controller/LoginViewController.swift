@@ -18,7 +18,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var emailLabel: UILabel!
     
-    
+    //MARK:- ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
        
@@ -32,10 +32,22 @@ class LoginViewController: UIViewController {
         
         hideKeyboardWhenEndEditing()
         
-        
-
+    
     }
  
+    @IBAction func forgetPasswordButton(_ sender: Any) {
+        guard let email = emailField.text, !email.isEmpty else {
+          
+            return
+        }
+        UserManager.shared.resetPassword(email: email) { (error) in
+            if error == nil {
+                ProgressHUD.showSuccess("Reset password email has been sent, please check your email")
+            }else {
+                ProgressHUD.showFailed(error?.localizedDescription)
+            }
+        }
+    }
     //MARK:- Did tap Login Button
 
     @IBAction func loginButton(_ sender: Any) {
@@ -48,6 +60,7 @@ class LoginViewController: UIViewController {
                 if error == nil {
                     if isEmailVerified {
                         print("go to app")
+                        self.dismiss(animated: true, completion: nil)
                     }else {
                         ProgressHUD.showError("Please check your Emial and varify your account to confirm Registration")
                     }
@@ -87,6 +100,7 @@ class LoginViewController: UIViewController {
 }//  loginViewController
 
 
+//MARK:- textField Delegation
 extension LoginViewController : UITextFieldDelegate {
     
     func textFieldDidChangeSelection(_ textField: UITextField) {

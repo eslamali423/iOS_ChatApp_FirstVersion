@@ -22,6 +22,7 @@
 		28897B3C27D7906800C7AA8A /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28897B3B27D7906800C7AA8A /* Helper.swift */; };
 		28897B4027D791D600C7AA8A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28897B3F27D791D600C7AA8A /* User.swift */; };
 		28897B4427D794C800C7AA8A /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28897B4327D794C800C7AA8A /* UserManager.swift */; };
+		28D4597427D8E284000CF90E /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D4597327D8E284000CF90E /* SettingsTableViewController.swift */; };
 		29B8EFE57497EBE82CC49EEB /* Pods_myChatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8681CCA3ED7EA253B5ABC63E /* Pods_myChatApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		28897B3B27D7906800C7AA8A /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		28897B3F27D791D600C7AA8A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		28897B4327D794C800C7AA8A /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		28D4597327D8E284000CF90E /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		380BBCEE191365B0BBDCB4C9 /* Pods-myChatApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myChatApp.release.xcconfig"; path = "Target Support Files/Pods-myChatApp/Pods-myChatApp.release.xcconfig"; sourceTree = "<group>"; };
 		59125B19B8042B1929B40356 /* Pods-myChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myChatApp.debug.xcconfig"; path = "Target Support Files/Pods-myChatApp/Pods-myChatApp.debug.xcconfig"; sourceTree = "<group>"; };
 		8681CCA3ED7EA253B5ABC63E /* Pods_myChatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myChatApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +70,7 @@
 				2859D3A927D685C400F1C3CE /* RegistrationViewController.swift */,
 				2859D3AC27D68E2500F1C3CE /* ChatsViewController.swift */,
 				2859D3AF27D6904600F1C3CE /* ContainerViewController.swift */,
+				28D4597327D8E284000CF90E /* SettingsTableViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -115,11 +118,11 @@
 				28897B3527D78E5200C7AA8A /* Helper */,
 				2859D3A727D682BD00F1C3CE /* view */,
 				2859D3A027D6805B00F1C3CE /* controller */,
-				287FB4EF27D648D200FA7D6C /* AppDelegate.swift */,
+				287FB4F827D648D200FA7D6C /* myChatApp.xcdatamodeld */,
 				287FB4F127D648D200FA7D6C /* SceneDelegate.swift */,
+				287FB4EF27D648D200FA7D6C /* AppDelegate.swift */,
 				2859D39D27D6802300F1C3CE /* GoogleService-Info.plist */,
 				287FB50027D648D400FA7D6C /* Info.plist */,
-				287FB4F827D648D200FA7D6C /* myChatApp.xcdatamodeld */,
 			);
 			path = myChatApp;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				28897B3C27D7906800C7AA8A /* Helper.swift in Sources */,
 				2859D3AD27D68E2500F1C3CE /* ChatsViewController.swift in Sources */,
 				2859D3A227D6808B00F1C3CE /* LoginViewController.swift in Sources */,
+				28D4597427D8E284000CF90E /* SettingsTableViewController.swift in Sources */,
 				28897B4027D791D600C7AA8A /* User.swift in Sources */,
 				28897B4427D794C800C7AA8A /* UserManager.swift in Sources */,
 				287FB4F227D648D200FA7D6C /* SceneDelegate.swift in Sources */,

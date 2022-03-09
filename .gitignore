@@ -4935,3 +4935,18 @@ myChatApp/Pods/Target Support Files/SKPhotoBrowser/SKPhotoBrowser-prefix.pch
 myChatApp/Pods/Target Support Files/SKPhotoBrowser/SKPhotoBrowser.debug.xcconfig
 myChatApp/Pods/Target Support Files/SKPhotoBrowser/SKPhotoBrowser.modulemap
 myChatApp/Pods/Target Support Files/SKPhotoBrowser/SKPhotoBrowser.release.xcconfig
+*.plist
+myChatApp/Pods/FirebaseFirestoreSwift/Firestore/Swift/Source/AsyncAwait/CollectionReference+AsyncAwait.swift
+*.swift
+*.md
+*.plist
+*.xcscheme
+*.plist
+*.xcconfig
+*.modulemap
+*.modulemap
+*.m
+myChatApp/Pods/FirebaseFirestoreSwift/LICENSE
+*.plist
+*.plist
+myChatApp/myChatApp.xcodeproj/xcuserdata/eslamali.xcuserdatad/xcschemes/xcschememanagement.plist

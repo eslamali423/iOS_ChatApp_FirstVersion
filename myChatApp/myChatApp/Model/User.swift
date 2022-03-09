@@ -7,6 +7,7 @@
 
 import Foundation
 import FirebaseFirestoreSwift
+import Firebase
 
 
 struct User : Codable {
@@ -16,6 +17,22 @@ struct User : Codable {
     var pushID = ""
     var avatarLink = ""
     var status : String
+    
+    static var currentUser : User? {
+        if Auth.auth().currentUser != nil {  
+            if let data =  UserDefaults.standard.data(forKey: "currentUser")  {
+                do {
+                    let userObject = try JSONDecoder().decode(User.self, from: data)
+                    return userObject
+                }catch{
+                    print(error.localizedDescription)
+                }
+            }
+        }
+        return nil
+    }
+    
+    
 }
 
 

@@ -97,6 +97,28 @@ class UserManager {
         }
     }
     
+    //MARK:- Reset password
+    func resetPassword(email : String, completion : @escaping (_ error : Error?)->Void) {
+        Auth.auth().sendPasswordReset(withEmail: email) { (error) in
+            completion(error)
+        }
+    }
+    
+    //MARK:- Did Tap Logout Button
+
+    public func signOut (completion : (Bool) -> Void){
+            do{
+                try Auth.auth().signOut()
+                completion(true)
+            }
+            catch {
+            print("Error in sign out")
+                completion(false)
+            }
+ 
+    }
+    
+    
     
     
 }

@@ -18,6 +18,10 @@ struct User : Codable {
     var avatarLink = ""
     var status : String
     
+    static var currentID :String {
+        return Auth.auth().currentUser!.uid
+    }
+    
     static var currentUser : User? {
         if Auth.auth().currentUser != nil {  
             if let data =  UserDefaults.standard.data(forKey: "currentUser")  {

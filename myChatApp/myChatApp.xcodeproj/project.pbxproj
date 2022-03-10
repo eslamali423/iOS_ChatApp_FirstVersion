@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		281B190B27DA812700B64A6E /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281B190A27DA812700B64A6E /* StorageManager.swift */; };
 		2859D39E27D6802300F1C3CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2859D39D27D6802300F1C3CE /* GoogleService-Info.plist */; };
 		2859D3A227D6808B00F1C3CE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2859D3A127D6808B00F1C3CE /* LoginViewController.swift */; };
 		2859D3AA27D685C400F1C3CE /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2859D3A927D685C400F1C3CE /* RegistrationViewController.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		281B190A27DA812700B64A6E /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		2859D39D27D6802300F1C3CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2859D3A127D6808B00F1C3CE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2859D3A927D685C400F1C3CE /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			children = (
 				28897B3B27D7906800C7AA8A /* Helper.swift */,
 				28897B4327D794C800C7AA8A /* UserManager.swift */,
+				281B190A27DA812700B64A6E /* StorageManager.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				2859D3AA27D685C400F1C3CE /* RegistrationViewController.swift in Sources */,
 				287FB4F427D648D200FA7D6C /* ViewController.swift in Sources */,
 				2859D3B027D6904600F1C3CE /* ContainerViewController.swift in Sources */,
+				281B190B27DA812700B64A6E /* StorageManager.swift in Sources */,
 				287FB4FA27D648D200FA7D6C /* myChatApp.xcdatamodeld in Sources */,
 				287FB4F027D648D200FA7D6C /* AppDelegate.swift in Sources */,
 				28897B3C27D7906800C7AA8A /* Helper.swift in Sources */,

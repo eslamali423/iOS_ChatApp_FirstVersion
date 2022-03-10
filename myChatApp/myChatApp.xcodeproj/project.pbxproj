@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		281B190B27DA812700B64A6E /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281B190A27DA812700B64A6E /* StorageManager.swift */; };
 		2859D39E27D6802300F1C3CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2859D39D27D6802300F1C3CE /* GoogleService-Info.plist */; };
 		2859D3A227D6808B00F1C3CE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2859D3A127D6808B00F1C3CE /* LoginViewController.swift */; };
 		2859D3AA27D685C400F1C3CE /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2859D3A927D685C400F1C3CE /* RegistrationViewController.swift */; };
@@ -26,6 +25,9 @@
 		28D4597427D8E284000CF90E /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D4597327D8E284000CF90E /* SettingsTableViewController.swift */; };
 		28D4597B27D94F23000CF90E /* EditProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D4597A27D94F23000CF90E /* EditProfileTableViewController.swift */; };
 		28F90CC427DA95380090CAF4 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F90CC327DA95380090CAF4 /* Global.swift */; };
+		28FFE95F27DAAC4B00124780 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281B190A27DA812700B64A6E /* StorageManager.swift */; };
+		28FFE96227DAAD9F00124780 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FFE96127DAAD9F00124780 /* UsersViewController.swift */; };
+		28FFE96527DAAF6900124780 /* UsersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FFE96427DAAF6900124780 /* UsersTableViewCell.swift */; };
 		29B8EFE57497EBE82CC49EEB /* Pods_myChatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8681CCA3ED7EA253B5ABC63E /* Pods_myChatApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +53,8 @@
 		28D4597327D8E284000CF90E /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		28D4597A27D94F23000CF90E /* EditProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileTableViewController.swift; sourceTree = "<group>"; };
 		28F90CC327DA95380090CAF4 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		28FFE96127DAAD9F00124780 /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
+		28FFE96427DAAF6900124780 /* UsersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewCell.swift; sourceTree = "<group>"; };
 		380BBCEE191365B0BBDCB4C9 /* Pods-myChatApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myChatApp.release.xcconfig"; path = "Target Support Files/Pods-myChatApp/Pods-myChatApp.release.xcconfig"; sourceTree = "<group>"; };
 		59125B19B8042B1929B40356 /* Pods-myChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myChatApp.debug.xcconfig"; path = "Target Support Files/Pods-myChatApp/Pods-myChatApp.debug.xcconfig"; sourceTree = "<group>"; };
 		8681CCA3ED7EA253B5ABC63E /* Pods_myChatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myChatApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +82,8 @@
 				2859D3AF27D6904600F1C3CE /* ContainerViewController.swift */,
 				28D4597327D8E284000CF90E /* SettingsTableViewController.swift */,
 				28D4597A27D94F23000CF90E /* EditProfileTableViewController.swift */,
+				28FFE96127DAAD9F00124780 /* UsersViewController.swift */,
+				28FFE96427DAAF6900124780 /* UsersTableViewCell.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -288,16 +294,18 @@
 				2859D3AA27D685C400F1C3CE /* RegistrationViewController.swift in Sources */,
 				287FB4F427D648D200FA7D6C /* ViewController.swift in Sources */,
 				2859D3B027D6904600F1C3CE /* ContainerViewController.swift in Sources */,
-				281B190B27DA812700B64A6E /* StorageManager.swift in Sources */,
 				287FB4FA27D648D200FA7D6C /* myChatApp.xcdatamodeld in Sources */,
 				287FB4F027D648D200FA7D6C /* AppDelegate.swift in Sources */,
+				28FFE96227DAAD9F00124780 /* UsersViewController.swift in Sources */,
 				28897B3C27D7906800C7AA8A /* Helper.swift in Sources */,
 				2859D3AD27D68E2500F1C3CE /* ChatsViewController.swift in Sources */,
 				2859D3A227D6808B00F1C3CE /* LoginViewController.swift in Sources */,
 				28D4597427D8E284000CF90E /* SettingsTableViewController.swift in Sources */,
 				28897B4027D791D600C7AA8A /* User.swift in Sources */,
 				28897B4427D794C800C7AA8A /* UserManager.swift in Sources */,
+				28FFE96527DAAF6900124780 /* UsersTableViewCell.swift in Sources */,
 				28D4597B27D94F23000CF90E /* EditProfileTableViewController.swift in Sources */,
+				28FFE95F27DAAC4B00124780 /* StorageManager.swift in Sources */,
 				287FB4F227D648D200FA7D6C /* SceneDelegate.swift in Sources */,
 				28F90CC427DA95380090CAF4 /* Global.swift in Sources */,
 			);

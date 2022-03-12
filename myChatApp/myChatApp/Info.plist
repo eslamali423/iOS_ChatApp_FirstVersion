@@ -63,10 +63,10 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>NSCameraUsageDescription</key>
-	<string>$(PRODUCT_NAME) needs access to your camera </string>
+	<string></string>
 	<key>NSAppleMusicUsageDescription</key>
-	<string>$(PRODUCT_NAME) needs access to your Media Liberary</string>
+	<string></string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>$(PRODUCT_NAME) needs access to your Photo Library </string>
+	<string></string>
 </dict>
 </plist>

@@ -10,7 +10,7 @@ import FirebaseFirestoreSwift
 import Firebase
 
 
-struct User : Codable {
+struct User : Codable, Equatable {
     var id = ""
     var username : String
     var email : String
@@ -37,6 +37,10 @@ struct User : Codable {
     }
     
     
+}
+
+func == (lhs : User, rhs : User) -> Bool{
+    lhs.id == rhs.id
 }
 
 
